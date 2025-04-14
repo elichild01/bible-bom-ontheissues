@@ -1,0 +1,105 @@
+is_bible,book,chapter,verse,text,does_god_have_a_body_relevance,does_god_have_a_body_support_1,does_god_have_a_body_support_2
+True,Luke,24,1,"Now upon the first [day] of the week, very early in the morning, they came unto the sepulchre, bringing the spices which they had prepared, and certain [others] with them.",0.05,0.0,0.05
+True,Luke,24,2,And they found the stone rolled away from the sepulchre.,0.05,0.0,0.05
+True,Luke,24,3,"And they entered in, and found not the body of the Lord Jesus.",0.2,0.0,0.5
+True,Luke,24,4,"And it came to pass, as they were much perplexed thereabout, behold, two men stood by them in shining garments:",0.1,0.0,0.1
+True,Luke,24,5,"And as they were afraid, and bowed down [their] faces to the earth, they said unto them, Why seek ye the living among the dead?",0.1,0.0,0.0
+True,Luke,24,6,"He is not here, but is risen: remember how he spake unto you when he was yet in Galilee,",0.1,0.0,0.2
+True,Luke,24,7,"Saying, The Son of man must be delivered into the hands of sinful men, and be crucified, and the third day rise again.",0.3,0.0,0.5
+True,Luke,24,8,"And they remembered his words,",0.1,0.0,0.2
+True,Luke,24,9,"And returned from the sepulchre, and told all these things unto the eleven, and to all the rest.",0.0,0.0,0.0
+True,Luke,24,10,"It was Mary Magdalene, and Joanna, and Mary [the mother] of James, and other [women that were] with them, which told these things unto the apostles.",0.0,0.0,0.0
+True,Luke,24,11,"And their words seemed to them as idle tales, and they believed them not.",0.1,0.0,0.0
+True,Luke,24,12,"Then arose Peter, and ran unto the sepulchre; and stooping down, he beheld the linen clothes laid by themselves, and departed, wondering in himself at that which was come to pass.",0.1,0.0,0.1
+True,Luke,24,13,"And, behold, two of them went that same day to a village called Emmaus, which was from Jerusalem [about] threescore furlongs.",0.1,0.0,0.0
+True,Luke,24,14,And they talked together of all these things which had happened.,0.0,0.0,0.0
+True,Luke,24,15,"And it came to pass, that, while they communed [together] and reasoned, Jesus himself drew near, and went with them.",0.2,0.0,0.4
+True,Luke,24,16,But their eyes were holden that they should not know him.,0.2,0.0,0.3
+True,Luke,24,17,"And he said unto them, What manner of communications [are] these that ye have one to another, as ye walk, and are sad?",0.05,0.05,0.1
+True,Luke,24,18,"And the one of them, whose name was Cleopas, answering said unto him, Art thou only a stranger in Jerusalem, and hast not known the things which are come to pass there in these days?",0.0,0.0,0.0
+True,Luke,24,19,"And he said unto them, What things? And they said unto him, Concerning Jesus of Nazareth, which was a prophet mighty in deed and word before God and all the people:",0.2,0.0,0.5
+True,Luke,24,20,"And how the chief priests and our rulers delivered him to be condemned to death, and have crucified him.",0.05,0.0,0.1
+True,Luke,24,21,"But we trusted that it had been he which should have redeemed Israel: and beside all this, to day is the third day since these things were done.",0.1,0.0,0.1
+True,Luke,24,22,"Yea, and certain women also of our company made us astonished, which were early at the sepulchre;",0.05,0.0,0.05
+True,Luke,24,23,"And when they found not his body, they came, saying, that they had also seen a vision of angels, which said that he was alive.",0.1,0.0,0.2
+True,Luke,24,24,"And certain of them which were with us went to the sepulchre, and found [it] even so as the women had said: but him they saw not.",0.05,0.0,0.1
+True,Luke,24,25,"Then he said unto them, O fools, and slow of heart to believe all that the prophets have spoken:",0.0,0.0,0.0
+True,Luke,24,26,"Ought not Christ to have suffered these things, and to enter into his glory?",0.1,0.0,0.2
+True,Luke,24,27,"And beginning at Moses and all the prophets, he expounded unto them in all the scriptures the things concerning himself.",0.2,0.15,0.3
+True,Luke,24,28,"And they drew nigh unto the village, whither they went: and he made as though he would have gone further.",0.1,0.0,0.0
+True,Luke,24,29,"But they constrained him, saying, Abide with us: for it is toward evening, and the day is far spent. And he went in to tarry with them.",0.05,0.0,0.05
+True,Luke,24,30,"And it came to pass, as he sat at meat with them, he took bread, and blessed [it], and brake, and gave to them.",0.2,0.0,0.5
+True,Luke,24,31,"And their eyes were opened, and they knew him; and he vanished out of their sight.",0.3,0.0,0.5
+True,Luke,24,32,"And they said one to another, Did not our heart burn within us, while he talked with us by the way, and while he opened to us the scriptures?",0.1,0.0,0.1
+True,Luke,24,33,"And they rose up the same hour, and returned to Jerusalem, and found the eleven gathered together, and them that were with them,",0.05,0.0,0.05
+True,Luke,24,34,"Saying, The Lord is risen indeed, and hath appeared to Simon.",0.4,0.0,0.7
+True,Luke,24,35,"And they told what things [were done] in the way, and how he was known of them in breaking of bread.",0.1,0.0,0.2
+True,Luke,24,36,"And as they thus spake, Jesus himself stood in the midst of them, and saith unto them, Peace [be] unto you.",0.3,0.05,0.7
+True,Luke,24,37,"But they were terrified and affrighted, and supposed that they had seen a spirit.",0.2,0.0,0.1
+True,Luke,24,38,"And he said unto them, Why are ye troubled? and why do thoughts arise in your hearts?",0.2,0.0,0.15
+True,Luke,24,39,"Behold my hands and my feet, that it is I myself: handle me, and see; for a spirit hath not flesh and bones, as ye see me have.",0.8,0.05,0.9
+True,Luke,24,40,"And when he had thus spoken, he shewed them [his] hands and [his] feet.",0.6,0.0,0.9
+True,Luke,24,41,"And while they yet believed not for joy, and wondered, he said unto them, Have ye here any meat?",0.3,0.0,0.4
+True,Luke,24,42,"And they gave him a piece of a broiled fish, and of an honeycomb.",0.25,0.05,0.5
+True,Luke,24,43,"And he took [it], and did eat before them.",0.1,0.0,0.3
+True,Luke,24,44,"And he said unto them, These [are] the words which I spake unto you, while I was yet with you, that all things must be fulfilled, which were written in the law of Moses, and [in] the prophets, and [in] the psalms, concerning me.",0.1,0.0,0.2
+True,Luke,24,45,"Then opened he their understanding, that they might understand the scriptures,",0.2,0.0,0.1
+True,Luke,24,46,"And said unto them, Thus it is written, and thus it behoved Christ to suffer, and to rise from the dead the third day:",0.2,0.0,0.3
+True,Luke,24,47,"And that repentance and remission of sins should be preached in his name among all nations, beginning at Jerusalem.",0.05,0.1,0.15
+True,Luke,24,48,And ye are witnesses of these things.,0.1,0.0,0.2
+True,Luke,24,49,"And, behold, I send the promise of my Father upon you: but tarry ye in the city of Jerusalem, until ye be endued with power from on high.",0.25,0.1,0.3
+True,Luke,24,50,"And he led them out as far as to Bethany, and he lifted up his hands, and blessed them.",0.3,0.0,0.5
+True,Luke,24,51,"And it came to pass, while he blessed them, he was parted from them, and carried up into heaven.",0.3,0.0,0.5
+True,Luke,24,52,"And they worshipped him, and returned to Jerusalem with great joy:",0.1,0.0,0.2
+True,Luke,24,53,"And were continually in the temple, praising and blessing God. Amen.",0.1,0.0,0.1
+True,John,1,1,"In the beginning was the Word, and the Word was with God, and the Word was God.",0.5,0.05,0.8
+True,John,1,2,The same was in the beginning with God.,0.25,0.05,0.2
+True,John,1,3,All things were made by him; and without him was not any thing made that was made.,0.15,0.05,0.1
+True,John,1,4,In him was life; and the life was the light of men.,0.1,0.0,0.2
+True,John,1,5,And the light shineth in darkness; and the darkness comprehended it not.,0.1,0.0,0.0
+True,John,1,6,"There was a man sent from God, whose name [was] John.",0.1,0.0,0.1
+True,John,1,7,"The same came for a witness, to bear witness of the Light, that all [men] through him might believe.",0.2,0.0,0.1
+True,John,1,8,"He was not that Light, but [was sent] to bear witness of that Light.",0.2,0.1,0.4
+True,John,1,9,"[That] was the true Light, which lighteth every man that cometh into the world.",0.2,0.0,0.5
+True,John,1,10,"He was in the world, and the world was made by him, and the world knew him not.",0.3,0.0,0.4
+True,John,1,11,"He came unto his own, and his own received him not.",0.1,0.0,0.2
+True,John,1,12,"But as many as received him, to them gave he power to become the sons of God, [even] to them that believe on his name:",0.3,0.0,0.6
+True,John,1,13,"Which were born, not of blood, nor of the will of the flesh, nor of the will of man, but of God.",0.2,0.1,0.2
+True,John,1,14,"And the Word was made flesh, and dwelt among us, (and we beheld his glory, the glory as of the only begotten of the Father,) full of grace and truth.",0.75,0.05,0.9
+True,John,1,15,"John bare witness of him, and cried, saying, This was he of whom I spake, He that cometh after me is preferred before me: for he was before me.",0.2,0.05,0.15
+True,John,1,16,"And of his fulness have all we received, and grace for grace.",0.2,0.0,0.4
+True,John,1,17,"For the law was given by Moses, [but] grace and truth came by Jesus Christ.",0.1,0.0,0.2
+True,John,1,18,"No man hath seen God at any time; the only begotten Son, which is in the bosom of the Father, he hath declared [him].",0.5,0.7,0.3
+True,John,1,19,"And this is the record of John, when the Jews sent priests and Levites from Jerusalem to ask him, Who art thou?",0.0,0.0,0.0
+True,John,1,20,"And he confessed, and denied not; but confessed, I am not the Christ.",0.05,0.0,0.1
+True,John,1,21,"And they asked him, What then? Art thou Elias? And he saith, I am not. Art thou that prophet? And he answered, No.",0.1,0.0,0.2
+True,John,1,22,"Then said they unto him, Who art thou? that we may give an answer to them that sent us. What sayest thou of thyself?",0.05,0.0,0.0
+True,John,1,23,"He said, I [am] the voice of one crying in the wilderness, Make straight the way of the Lord, as said the prophet Esaias.",0.1,0.0,0.0
+True,John,1,24,And they which were sent were of the Pharisees.,0.0,0.0,0.0
+True,John,1,25,"And they asked him, and said unto him, Why baptizest thou then, if thou be not that Christ, nor Elias, neither that prophet?",0.0,0.0,0.0
+True,John,1,26,"John answered them, saying, I baptize with water: but there standeth one among you, whom ye know not;",0.1,0.0,0.1
+True,John,1,27,"He it is, who coming after me is preferred before me, whose shoe’s latchet I am not worthy to unloose.",0.2,0.0,0.2
+True,John,1,28,"These things were done in Bethabara beyond Jordan, where John was baptizing.",0.0,0.0,0.0
+True,John,1,29,"The next day John seeth Jesus coming unto him, and saith, Behold the Lamb of God, which taketh away the sin of the world.",0.2,0.1,0.3
+True,John,1,30,"This is he of whom I said, After me cometh a man which is preferred before me: for he was before me.",0.1,0.0,0.2
+True,John,1,31,"And I knew him not: but that he should be made manifest to Israel, therefore am I come baptizing with water.",0.0,0.0,0.0
+True,John,1,32,"And John bare record, saying, I saw the Spirit descending from heaven like a dove, and it abode upon him.",0.2,0.1,0.25
+True,John,1,33,"And I knew him not: but he that sent me to baptize with water, the same said unto me, Upon whom thou shalt see the Spirit descending, and remaining on him, the same is he which baptizeth with the Holy Ghost.",0.2,0.0,0.3
+True,John,1,34,"And I saw, and bare record that this is the Son of God.",0.1,0.0,0.2
+True,John,1,35,"Again the next day after John stood, and two of his disciples;",0.0,0.0,0.0
+True,John,1,36,"And looking upon Jesus as he walked, he saith, Behold the Lamb of God!",0.2,0.0,0.3
+True,John,1,37,"And the two disciples heard him speak, and they followed Jesus.",0.05,0.0,0.1
+True,John,1,38,"Then Jesus turned, and saw them following, and saith unto them, What seek ye? They said unto him, Rabbi, (which is to say, being interpreted, Master,) where dwellest thou?",0.1,0.0,0.05
+True,John,1,39,"He saith unto them, Come and see. They came and saw where he dwelt, and abode with him that day: for it was about the tenth hour.",0.05,0.0,0.05
+True,John,1,40,"One of the two which heard John [speak], and followed him, was Andrew, Simon Peter’s brother.",0.05,0.0,0.0
+True,John,1,41,"He first findeth his own brother Simon, and saith unto him, We have found the Messias, which is, being interpreted, the Christ.",0.05,0.0,0.1
+True,John,1,42,"And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas, which is by interpretation, A stone.",0.1,0.0,0.5
+True,John,1,43,"The day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me.",0.1,0.0,0.1
+True,John,1,44,"Now Philip was of Bethsaida, the city of Andrew and Peter.",0.0,0.0,0.0
+True,John,1,45,"Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write, Jesus of Nazareth, the son of Joseph.",0.2,0.0,0.5
+True,John,1,46,"And Nathanael said unto him, Can there any good thing come out of Nazareth? Philip saith unto him, Come and see.",0.1,0.0,0.0
+True,John,1,47,"Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!",0.05,0.0,0.1
+True,John,1,48,"Nathanael saith unto him, Whence knowest thou me? Jesus answered and said unto him, Before that Philip called thee, when thou wast under the fig tree, I saw thee.",0.2,0.0,0.1
+True,John,1,49,"Nathanael answered and saith unto him, Rabbi, thou art the Son of God; thou art the King of Israel.",0.3,0.0,0.6
+True,John,1,50,"Jesus answered and said unto him, Because I said unto thee, I saw thee under the fig tree, believest thou? thou shalt see greater things than these.",0.1,0.0,0.2
+True,John,1,51,"And he saith unto him, Verily, verily, I say unto you, Hereafter ye shall see heaven open, and the angels of God ascending and descending upon the Son of man.",0.3,0.05,0.25

@@ -3,8 +3,9 @@ import os
 import re
 import json
 import time
+from tqdm import tqdm
 import pandas as pd
-from openai import OpenAI
+from openai import OpenAI, OpenAIError
 
 # ─── Configuration ─────────────────────────────────────────────────────────────
 MODEL_NAME = "gpt-4o-mini"
@@ -14,10 +15,6 @@ RESULT_DIR = "./results"
 
 client = OpenAI()
 
-
-def slugify(text: str) -> str:
-    """Turn arbitrary text into a safe lowercase underscore_slug."""
-    return re.sub(r"\W+", "_", text.strip().lower()).strip("_")
 
 def extract_json(text: str) -> str:
     """Try to pull the first JSON object out of a string."""
@@ -34,7 +31,8 @@ def get_llm_ratings(verse: str, issue: str, viewpoints: list[str]) -> dict:
     # Build the prompt
     vp_list = "\n".join(f"{i+1}. {vp}" for i, vp in enumerate(viewpoints))
     prompt = f"""
-You are a theological analyst. Please rate the following verse for its relevance to the issue and agreement with each of the following viewpoints.
+You are a theological analyst. Please rate the following verse from the Bible or Book of Mormon for its relevance to the issue and agreement with each of the following viewpoints.
+Be skeptical in your relevance ratings. Most verses in scripture are not relevant to most theological issues. It's appropriate to give zeros.
 Verse: "{verse}"  
 Issue: "{issue}"  
 Viewpoints:
@@ -60,6 +58,7 @@ Example output:
             {"role": "user", "content": prompt}
         ],
         response_format={"type": "json_object"},
+        temperature=0.0,
     )
 
     # Extract the content from the response
@@ -112,43 +111,53 @@ def main():
 
     # 3) For each verse × issue, call LLM and collect
     results = []
-    total = len(all_verses) * len(issues_df)
-    counter = 0
 
-    for v in all_verses:
-        base = dict(v)  # copy the is_bible/book/chapter/verse/text
-        for _, issue_row in issues_df.iterrows():
-            issue = issue_row["issue"]
-            # gather viewpoints (skip NaN)
-            vps = [issue_row.get(f"viewpoint{i}") for i in (1, 2, 3)]
-            viewpoints = [vp for vp in vps if isinstance(vp, str) and vp.strip()]
+    try:
+        for vnum, v in tqdm(enumerate(all_verses), total=len(all_verses), desc="Processing verses"):
+            # # Skip to desired section of scripture
+            # if (v['book'] != 'Luke' or v['chapter'] != '24') and \
+            #     (v['book'] != 'John' or v['chapter'] != '1'):
+            #     continue
+            base = dict(v)  # copy the is_bible/book/chapter/verse/text
+            for _, issue_row in issues_df.iterrows():
+                # This is where we break if the issue is one we've already covered
+                issue = issue_row["issue"]
+                # gather viewpoints (skip NaN)
+                vps = [issue_row.get(f"viewpoint{i}") for i in (1, 2, 3)]
+                viewpoints = [vp for vp in vps if isinstance(vp, str) and vp.strip()]
 
-            # call LLM
-            try:
-                ratings = get_llm_ratings(v["text"], issue, viewpoints)
-            except Exception as e:
-                print(f"[Warning] LLM call failed for {v['book']} {v['chapter']}:{v['verse']} on '{issue}': {e}")
-                ratings = {"relevance": None, **{f"support_{i+1}": None for i in range(len(viewpoints))}}
+                # call LLM
+                try:
+                    ratings = get_llm_ratings(v["text"], issue, viewpoints)
+                except Exception as e:
+                    print(f"[Warning] LLM call failed for {v['book']} {v['chapter']}:{v['verse']} on '{issue}': {e}")
+                    ratings = {"relevance": None, **{f"support_{i+1}": None for i in range(len(viewpoints))}}
+                    raise e
 
-            # slug for column names
-            slug = slugify(issue)
-            base[f"{slug}_relevance"] = ratings.get("relevance")
-            for i in range(len(viewpoints)):
-                base[f"{slug}_support_{i+1}"] = ratings.get(f"support_{i+1}")
+                # slug for column names
+                issue_name_short = issue_row['issue_short']
+                base[f"{issue_name_short}_relevance"] = ratings.get("relevance")
+                for i in range(len(viewpoints)):
+                    base[f"{issue_name_short}_support_{i+1}"] = ratings.get(f"support_{i+1}")
+                # time.sleep(0.125) # avoid rate limiting
 
-            counter += 1
-            if counter % 50 == 0:
-                print(f"Processed {counter}/{total} calls...")
-            # rate‐limit to avoid throttling
-            break # FIXME: inserted to debug
-            time.sleep(0.3)
-
-        results.append(base)
-        break # FIXME: inserted for testing
+            results.append(base)
+            
+            # if vnum > 3: # FIXME: debug tool
+            #     break
+    except OpenAIError as oaie:
+        print(f"An OpenAI error occurred: {oaie}")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
 
     # 4) Dump to CSV
     df = pd.DataFrame(results)
-    out_path = os.path.join(RESULT_DIR, "concordance.csv")
+    exp_num = 0
+    out_path = os.path.join(RESULT_DIR, f"concordance_{exp_num}.csv")
+    # If the file already exists, create a new file numbered one up from the previous high
+    while os.path.exists(out_path):
+        exp_num += 1
+        out_path = os.path.join(RESULT_DIR, f"concordance_{exp_num}.csv")
     df.to_csv(out_path, index=False, encoding="utf-8")
     print(f"Done! Wrote {len(df)} rows to {out_path}")
 
