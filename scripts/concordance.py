@@ -114,10 +114,12 @@ def main():
 
     try:
         for vnum, v in tqdm(enumerate(all_verses), total=len(all_verses), desc="Processing verses"):
-            # # Skip to desired section of scripture
+            # Skip to desired section of scripture
             # if (v['book'] != 'Luke' or v['chapter'] != '24') and \
             #     (v['book'] != 'John' or v['chapter'] != '1'):
             #     continue
+            if vnum < 35594:
+                continue
             base = dict(v)  # copy the is_bible/book/chapter/verse/text
             for _, issue_row in issues_df.iterrows():
                 # This is where we break if the issue is one we've already covered
@@ -143,8 +145,6 @@ def main():
 
             results.append(base)
             
-            # if vnum > 3: # FIXME: debug tool
-            #     break
     except OpenAIError as oaie:
         print(f"An OpenAI error occurred: {oaie}")
     except Exception as e:
