@@ -25,6 +25,7 @@ import re
 import json
 import hashlib
 import pandas as pd
+import pdb
 import numpy as np
 from openai import OpenAI
 from tqdm import tqdm
@@ -61,6 +62,11 @@ def save_embedding_to_cache(text: str, emb: list[float]):
         json.dump(emb, f)
 
 def parse_verses(fn: str, is_bible: bool) -> list[dict]:
+    """
+    Read a verse file where each line is:
+      Book Chapter:Verse<Space>Text
+    Returns a list of dicts with keys: is_bible, book, chapter, verse, text
+    """
     verses = []
     with open(fn, encoding="utf-8") as f:
         for line in f:
@@ -101,7 +107,7 @@ def batch_embed(texts: list[str]) -> np.ndarray:
         batch = uncached[i : i + BATCH_SIZE]
         resp = client.embeddings.create(
             model=EMBED_MODEL,
-            input=batch
+            input=batch,
         )
         batch_embs = [d.embedding for d in resp.data]
         for j, emb in enumerate(batch_embs):
@@ -109,7 +115,6 @@ def batch_embed(texts: list[str]) -> np.ndarray:
             embs[idx] = emb
             save_embedding_to_cache(texts[idx], emb)
 
-    raise ValueError("let's see what's happened")
     return np.array(embs, dtype=np.float32)
 
 def normalize(embs: np.ndarray) -> np.ndarray:
@@ -120,8 +125,8 @@ def main():
     os.makedirs(RESULT_DIR, exist_ok=True)
     issues_df = pd.read_csv(os.path.join(DATA_DIR, "issues.csv"))
 
-    bible = parse_verses(os.path.join(DATA_DIR, "bible.txt"), True)
-    bom    = parse_verses(os.path.join(DATA_DIR, "bom.txt"),   False)
+    bible = parse_verses(os.path.join(DATA_DIR, "bible_filtered.txt"), True)
+    bom = parse_verses(os.path.join(DATA_DIR, "bom_filtered.txt"),   False)
     all_verses = bible + bom
     verse_texts = [v["text"] for v in all_verses]
 

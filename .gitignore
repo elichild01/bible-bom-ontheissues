@@ -1,5 +1,6 @@
 # my stuff
 .DS_Store
+cache/
 
 
 # Byte-compiled / optimized / DLL files

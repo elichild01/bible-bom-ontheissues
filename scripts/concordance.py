@@ -118,7 +118,7 @@ def main():
             # if (v['book'] != 'Luke' or v['chapter'] != '24') and \
             #     (v['book'] != 'John' or v['chapter'] != '1'):
             #     continue
-            if vnum < 35594:
+            if vnum < 36642:
                 continue
             base = dict(v)  # copy the is_bible/book/chapter/verse/text
             for _, issue_row in issues_df.iterrows():
